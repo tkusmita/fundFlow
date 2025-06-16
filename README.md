@@ -188,6 +188,6 @@ Ensure you have the following software installed on your machine:
 
 We're excited about FundFlow and always open to questions, feedback, or collaboration\! Feel free to reach out.
 
-  * **Project Lead/Team Name**: [Your Name/Team Name]
+  * **Project Lead**: [kusmita timsina ]
   * **Email**: [Your Email Address]
   * **GitHub Repository**: [Link to your GitHub profile/project]
