@@ -13,7 +13,6 @@ import { Mail, Phone, MapPin, Lock } from 'lucide-react';
 import Link from 'next/link';
 import { toast } from 'sonner';
 import axios from 'axios';
-import { Toaster } from '@/components/ui/sonner';
 
 const validationSchema = Yup.object({
   email: Yup.string()
@@ -50,7 +49,7 @@ const Register = () => {
     confirmPassword: ''
   };
 
-  const handleSubmit = async (values: typeof initialValues, { setSubmitting }: unknown) => {
+  const handleSubmit = async(values: typeof initialValues, { setSubmitting }: unknown) => {
      
   const {data}= await  axios.post('http://localhost:8080/register', values)
     toast(data)
