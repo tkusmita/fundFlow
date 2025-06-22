@@ -9,16 +9,19 @@ import { Card, CardContent } from '@/components/ui/card';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 
 
-import { Mail, Phone, MapPin, Lock } from 'lucide-react';
+import { Mail, Phone, MapPin, Lock, User } from 'lucide-react';
 import Link from 'next/link';
 import { toast } from 'sonner';
 import axios from 'axios';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@radix-ui/react-select';
 
 const validationSchema = Yup.object({
   email: Yup.string()
     .email('Invalid email address')
     .required('Email is required'),
-  
+   role: Yup.string()
+    .oneOf(['applicant', 'donor'], 'Please select a valid role')
+    .required('Role is required'),
   phoneNumber: Yup.string()
     .matches(/^[+]?[\d\s-()]+$/, 'Invalid phone number format')
     .min(10, 'Phone number must be at least 10 digits')
@@ -98,7 +101,23 @@ const Register = () => {
                     />
                     <ErrorMessage name="email" component="div" className="text-destructive text-sm" />
                   </div>
-
+                     {/* Role */}
+                  <div className="space-y-2">
+                    <Label htmlFor="role" className="flex items-center space-x-2">
+                      <User className="h-4 w-4 text-primary" />
+                      <span>Role</span>
+                    </Label>
+                    <Select value={values.role} onValueChange={(value) => setFieldValue('role', value)}>
+                      <SelectTrigger className="transition-all focus:ring-2 focus:ring-primary">
+                        <SelectValue placeholder="Select your role" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="user"> service user (applicant)</SelectItem>
+                        <SelectItem value="seller">  makes donations(donor)</SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <ErrorMessage name="role" component="div" className="text-destructive text-sm" />
+                  </div>
                   
                   {/* Phone Number */}
                   <div className="space-y-2">
