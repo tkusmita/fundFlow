@@ -50,11 +50,11 @@ const login = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const dispatch = useDispatch()
   const handleSubmit = async(values: typeof initialValues, { setSubmitting }: any) => {
-    const {data}= await  axios.post('http://localhost:8080/login', values)
+    const {data}= await  axios.post(process.env.NEXT_PUBLIC_API_URL+'/login', values)
     if(data?.isLoggedIn) {
   if(data.user.role === 'admin') {
-  router.push('/admin/dashboard') 
-        }else if(data.user.role === 'Donor') {
+  router.push('/manager/dashboard') 
+        }else if(data.user.role === 'donor') {
   router.push('/donor/dashboard')
       }
       else{
