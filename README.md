@@ -87,25 +87,22 @@ We are developing FundFlow in distinct, iterative phases, focusing on building a
       * ✅ Implemented **User Login** page.
       * ✅ Implemented **User Register** page.
       * ✅ Basic **Logout** functionality.
-      * ⬜ Admin Login/Dashboard interface.
-      * ⬜ **FundFlow** Registration Form.
-      * ⬜ Initial dashboard views for users/donors.
+      * ✅ Admin Login/Dashboard interface.
+      * ✅ **FundFlow** Registration Form.
+      * ✅ Initial dashboard views for users/donors.
   * **Backend (Completed up to)**:
       * ✅ **User Registration Endpoint**: Allows new users to sign up securely, checking for existing emails and hashing passwords using **bcrypt**.
       * ✅ **User Login Endpoint**: Authenticates users by verifying email existence, comparing passwords with **bcrypt**, and generating a **JWT** upon successful login.
       * ✅ **Get All Users Endpoint**: (For internal use/testing) Retrieves a list of all registered users.
-      * ⬜ **FundFlow** Registration Endpoint (pending verification flow).
-      * ⬜ Endpoints for submitting basic donation data.
+      
 
 ### Phase 2: Core Fund Management, Donor & Campaign Tools (Upcoming)
 
 **Goal**: Implement comprehensive donor and campaign management, along with initial fund tracking and automated communications.
 
-  * ⬜ **Donor Profile Management**: CRUD (Create, Read, Update, Delete) operations for detailed donor information and their giving history.
-  * ⬜ **Campaign Creation & Management**: Tools for **FundFlow** administrators to create, edit, and track various fundraising campaigns and specific projects.
-  * ⬜ **Fund Allocation System**: Core functionality to explicitly link donations to specific campaigns or projects.
-  * ⬜ **Automated Thank-You Emails & Receipts**: Implement sending automated email confirmations for donations and thank-you notes.
-  * ⬜ **Payment Gateway Integration**: Integrate a secure payment gateway for seamless and secure transactions (initially in a test environment).
+  * ✅ **Donor Profile Management**: CRUD (Create, Read, Update, Delete) operations for detailed donor information and their giving history.
+  specific projects.
+  * ✅ **Automated Thank-You Emails & Receipts**: Implement sending automated email confirmations for donations and thank-you notes.
   * ⬜ **Basic Financial Reporting**: Generate summary reports on total donations and campaign progress.
 
 ### Phase 3: Advanced Analytics, Transparency & Engagement (Future)

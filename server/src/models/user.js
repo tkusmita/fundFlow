@@ -4,10 +4,10 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
   email: String, // String is shorthand for {type: String}
   phoneNumber: String,
+  name: String,
   role: String,
-  password: String,
-  location: String
-
+  avatar: String,
+  password: String
 });
-const User = mongoose.model('User', userSchema);
+const User = mongoose.model('user', userSchema);
 export default User;

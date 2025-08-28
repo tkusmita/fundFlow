@@ -1,4 +1,4 @@
-import Sidebar from '@/components/sidebar'
+import Sidebar from '@/components/Activitysidebar'
 import React from 'react'
 
 const TrackDriver = () => {
